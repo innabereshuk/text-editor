@@ -99,9 +99,6 @@ span:not(:empty) + time:not(:empty):before {
     margin: 1.7em 0;
 }
 
-.editor {
-
-}
 
 .editor__area {
     background: #181818;
