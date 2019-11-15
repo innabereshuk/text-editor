@@ -43,20 +43,21 @@ body {
     font-size: 2.7rem;
     color: black;
     line-height: 1.5;
+    position: relative;
 }
 
 a, button {
-    transition: all .4s ease-in;
+    transition: all .25s ease-in;
 }
 
 .article {
-background: white;
-max-width: 1060px;
-width: 96%;
-margin: 150px auto 50px;
-padding: 200px 120px 120px 125px;
-position: relative;
-box-shadow: 0 0 35px 0 rgba(0, 0, 0 , .8);
+    background: white;
+    max-width: 1060px;
+    width: 96%;
+    margin: 150px auto 50px;
+    padding: 200px 120px 120px 125px;
+    position: relative;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0 , .8);
 }
 
 .article:before {
@@ -99,6 +100,14 @@ span:not(:empty) + time:not(:empty):before {
     margin: 1.7em 0;
 }
 
+.editor {
+    position: absolute;
+    z-index: 1;
+    width: 67%;
+    right: 0;
+    top: -100px;
+}
+
 
 .editor__area {
     background: #181818;
@@ -130,4 +139,36 @@ span:not(:empty) + time:not(:empty):before {
 .editor__imput:focus {
     outline: none;
     border-color: #303030;
+}
+
+.editor__tools {
+    background: #f2df2d;
+    margin-left: 60px;
+    box-shadow: 0 0 35 0 rgba(0, 0, 0 , .1);
+}
+
+.editor__btns {
+    margin: 0;
+    padding: 15px 30px;
+}
+
+.editor__btns li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.editor__btn {
+    color: white;
+    opacity: .6;
+}
+
+.editor__btn:hover,
+.editor__btn:focus,
+.editor__btn--active {
+    opacity: 1;
+}
+
+.editor__btn:active {
+    opacity: 1;
+    color: #8f8f8f;
 }
